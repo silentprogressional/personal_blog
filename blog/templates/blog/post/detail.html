@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<header class="masthead">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>{{ post.title }}</h1>
+          <h2 class="subheading"># eventually post hashes/topics #</h2>
+          <span class="meta">Posted by
+            <a href="#">{{ post.author }}</a>
+            on {{ post.publish }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       <p>{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+</article>
+{% endblock %}
